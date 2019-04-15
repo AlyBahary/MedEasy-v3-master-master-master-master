@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
@@ -12,8 +14,10 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
+
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
+import com.example.nihal.medeasy.Fragment.ProfileFragment;
 import com.example.nihal.medeasy.widget.CanaroTextView;
 import com.yalantis.guillotine.animation.GuillotineAnimation;
 
@@ -33,7 +37,7 @@ public class HomeActivity extends AppCompatActivity {
         root = findViewById(R.id.root);
         contentHamburger = findViewById(R.id.guillotine_icon_nav);
         bottom_navigation = findViewById(R.id.bottom_navigation);
-
+        final ProfileFragment profileFragment=new ProfileFragment();
 
         //NavigationDrawer
 
@@ -103,11 +107,17 @@ public class HomeActivity extends AppCompatActivity {
             public boolean onTabSelected(int position, boolean wasSelected) {
                 // Do something cool here...
                 if(position==0){
-
+                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.container, profileFragment);
+                    fragmentTransaction.commit();
                 }else if(position==1){
-
+                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.container, profileFragment);
+                    fragmentTransaction.commit();
                 }else {
-
+                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.container, profileFragment);
+                    fragmentTransaction.commit();
                 }
                 return true;
             }

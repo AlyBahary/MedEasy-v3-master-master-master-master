@@ -2,7 +2,7 @@ package com.example.nihal.medeasy.Models;
 
 public class UserModel {
 
-  private   String UserName, Address, Occupation, FamilyHistoryLink, Weight, Height;
+    private String UserName, YearOfBirth, Address, Occupation, FamilyHistoryLink, Weight, Height, Password, PhoneNumber;
 
     public String getUserName() {
         return UserName;
@@ -18,6 +18,14 @@ public class UserModel {
 
     public void setAddress(String address) {
         Address = address;
+    }
+
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String password) {
+        Password = password;
     }
 
     public String getOccupation() {
@@ -36,6 +44,14 @@ public class UserModel {
         FamilyHistoryLink = familyHistoryLink;
     }
 
+    public String getPhoneNumber() {
+        return PhoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        PhoneNumber = phoneNumber;
+    }
+
     public String getWeight() {
         return Weight;
     }
@@ -52,16 +68,29 @@ public class UserModel {
         Height = height;
     }
 
-    public UserModel(String userName, String address, String occupation, String familyHistoryLink, String weight, String height) {
+    public String getYearOfBirth() {
+        return YearOfBirth;
+    }
+
+    public void setYearOfBirth(String yearOfBirth) {
+        YearOfBirth = yearOfBirth;
+    }
+
+    public UserModel(String userName, String address, String occupation, String familyHistoryLink, String weight, String height, String yearOfBirth, String password, String phonNumber) {
         UserName = userName;
         Address = address;
         Occupation = occupation;
         FamilyHistoryLink = familyHistoryLink;
         Weight = weight;
         Height = height;
+        YearOfBirth = yearOfBirth;
+        Password = password;
+        PhoneNumber = phonNumber;
     }
-    public UserModel(){
+
+    public UserModel() {
 
     }
 }
+
 

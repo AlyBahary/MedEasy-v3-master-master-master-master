@@ -63,12 +63,15 @@ public class SignupActivity extends AppCompatActivity {
                 String HeightInFireB = Height.getText().toString();
 
                 final UserModel user = new UserModel(
-                        UserNameInFireB,
-                        AddressInFireB,
-                        OccupationInFireB,
-                        FamilyHistoryLinkInFireB,
-                        WeightInFireB,
-                        HeightInFireB
+                        UserNameInFireB+"",
+                        AddressInFireB+"",
+                        OccupationInFireB+"",
+                        FamilyHistoryLinkInFireB+"",
+                        WeightInFireB+"",
+                        HeightInFireB+"",
+                        ""
+                        ,""
+                        ,""
                 );
 
                 auth.createUserWithEmailAndPassword(UserPhoneInFireB, PassWordInFireB).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
